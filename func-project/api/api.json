@@ -1,0 +1,109 @@
+{
+  "departamento": [
+    {
+      "id" : 1,
+      "nome" : "Recursos Humanos"
+    },
+    {
+      "id" : 2,
+      "nome" : "Administração"
+    },
+    {
+      "id" : 3,
+      "nome" : "CSM"
+    },
+    {
+      "id" : 4,
+      "nome" : "Financeiro"
+    },
+    {
+      "id" : 5,
+      "nome" : "CAM"
+    },
+    {
+      "id" : 6,
+      "nome" : "CSO"
+    },
+    {
+      "id" : 7,
+      "nome" : "CNC"
+    },
+    {
+      "id" : 8,
+      "nome" : "Marketing"
+    },
+    {
+      "id" : 9,
+      "nome" : "CVI"
+    },
+    {
+      "id" : 10,
+      "nome" : "Tecnologia"
+    },
+    {
+      "id" : 11,
+      "nome" : "Infraestrutura de Redes"
+    },
+    {
+      "id" : 12,
+      "nome" : "Sistemas de Informação"
+    }
+  ],
+  "funcionario" : [
+    {
+      "id": 1,
+      "nome": "Cláudio Cobaia Domingues",
+      "email": "claudio@vetorial.com",
+      "senha": "123",
+      "celular": "912345678",
+      "sexo": "masculino",
+      "admin": true,
+      "cpf": "09092348569",
+      "rg": "92837457",
+      "id_depto": 1,
+      "data_nascimento" : "01/01/1993",
+      "salario": 1200.40,
+      "endereco": { 
+        "cep": "96202336",
+        "rua": "Avenida Presidente Vargas",
+        "numero": "123",
+        "bairro": "São Paulo",
+        "cidade": "Rio Grande",
+        "complemento":"",
+        "estado": "RS"
+      }
+    },
+    {
+      "id": 3,
+      "nome": "Fernanda Teste da Silva",
+      "email": "fernanda@vetorial.com",
+      "senha": "123",
+      "celular": "912345678",
+      "sexo": "feminino",
+      "admin": false,
+      "cpf": "12345678910",
+      "rg": "0123456789",
+      "id_depto": 2,
+      "data_nascimento" : "02/02/2000",
+      "salario": 1000,
+      "endereco": { 
+        "cep": "12345678",
+        "rua": "Rua de Teste",
+        "numero": "171",
+        "bairro": "Bairro Teste",
+        "cidade": "Rio Grande",
+        "complemento":"",
+        "estado": "RS"
+      }
+    }
+  ],
+  "tarefa" : [
+    {
+      "id": 1,
+      "id_funcionario": 1,
+      "titulo" : "Teste Tarefa",
+      "descricao" : "lorem ipsum aqui",
+      "status" : "Em execução"
+    }
+  ]
+}
