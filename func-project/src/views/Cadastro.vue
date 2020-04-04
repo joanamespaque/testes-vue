@@ -17,15 +17,20 @@
       </v-row>
     </v-app>
     <div class="buttons"></div>
-    <transition mode="out-in">
-      <CadastroFuncionario v-if="cadastrofunc === true && cadastrodep === false" />
-      <CadastroDepartamento v-else-if="cadastrofunc === false && cadastrodep === true" />
-    </transition>
+    <v-app>
+      <transition mode="out-in">
+        <FuncionarioForm v-if="cadastrofunc === true && cadastrodep === false">
+          <h1>Cadastro Funcionário</h1>
+          <template v-slot:divbuttons></template>
+        </FuncionarioForm>
+        <CadastroDepartamento v-else-if="cadastrofunc === false && cadastrodep === true" />
+      </transition>
+    </v-app>
   </div>
 </template>
 
 <script>
-import CadastroFuncionario from "@/components/CadastroFuncionario.vue";
+import FuncionarioForm from "@/components/FuncionarioForm.vue";
 import CadastroDepartamento from "@/components/CadastroDepartamento.vue";
 export default {
   name: "Cadastro",
@@ -37,7 +42,7 @@ export default {
     };
   },
   components: {
-    CadastroFuncionario,
+    FuncionarioForm,
     CadastroDepartamento
   },
   methods: {
@@ -72,6 +77,7 @@ export default {
 
 h1 {
   text-align: center;
+  color: rgb(65, 65, 65);
 }
 
 h3 {

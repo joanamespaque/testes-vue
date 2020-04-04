@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Vuex from "vuex";
-// import { api } from "@/services.js";
+import {
+  api
+} from "@/services.js";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -12,14 +14,17 @@ export default new Vuex.Store({
   strict: true,
   state: {
     login: true,
-    usuario: {
+    departamento: {
       id: "",
-      nome: "Usuário de Teste",
+      nome: ""
+    },
+    funcionario: {
+      id: "",
+      nome: "",
       email: "",
       senha: "",
       confirmaSenha: "",
       celular: "",
-      genero: "",
       admin: "",
       cpf: "",
       rg: "",
@@ -34,68 +39,69 @@ export default new Vuex.Store({
       estado: "",
 
     },
-    usuario_tarefas: null,
+    funcionario_tarefas: null,
     rules: {
       required: v => v ? !!v || 'Esse campo deve ser preenchido.' : true,
-      email: v => v ? /.+@.+\..+/.test(v) || 'O e-mail deve ser válido.' : true
+      email: v => v ? /.+@.+\..+/.test(v) || 'O e-mail deve ser válido.' : true,
     }
   },
   mutations: {
     UPDATE_LOGIN(state, payload) {
       state.login = payload;
     },
-    UPDATE_USUARIO(state, payload) {
-      state.usuario = Object.assign(state.usuario, payload);
+    UPDATE_FUNCIONARIO(state, payload) {
+      state.funcionario = Object.assign(state.funcionario, payload);
     },
-    UPDATE_USUARIO_TAREFAS(state, payload) {
-      state.usuario_tarefas = payload;
+    UPDATE_DEPARTAMENTO(state, payload) {
+      state.funcionario = Object.assign(state.departamento, payload);
     },
-    ADD_USUARIO_TAREFAS(state, payload) {
-      state.usuario_tarefas.unshit(payload);
+    UPDATE_FUNCIONARIO_TAREFAS(state, payload) {
+      state.funcionario_tarefas = payload;
+    },
+    ADD_FUNCIONARIO_TAREFAS(state, payload) {
+      state.funcionario_tarefas.unshit(payload);
     }
   },
-  // actions: {
-  //   getUsuarioTarefas(context) {
-  //     api
-  //       .get(`/tarefa?id_funcionario=${context.state.usuario.id}`)
-  //       .then(response => {
-  //         context.commit("UPDATE_USUARIO_TAREFAS", response.data);
-  //       });
-  //   },
-  //   getUsuario(context, payload) {
-  //     return api.get(`/usuario/${payload}`).then(response => {
-  //       context.commit("UPDATE_USUARIO", response.data);
-  //       context.commit("UPDATE_LOGIN", true);
-  //     });
-  //   },
-  //   criarUsuario(context, payload) {
-  //     context.commit("UPDATE_USUARIO", { id: payload.email });
-  //     return api.post("/usuario", payload);
-  //   },
-  //   deslogarUsuario(context) {
-  //     context.commit("UPDATE_USUARIO",{
-  //       id: "",
-  //       nome: "",
-  //       email: "",
-  //       senha: "",
-  //       celular: "",
-  //       genero: "",
-  //       admin: "",
-  //       cpf: "",
-  //       rg: "",
-  //       id_depto: "",
-  //       data_nascimento: "",
-  //       salario: "",
-  //       endereco: {
-  //         cep: "",
-  //         rua: "",
-  //         numero: "",
-  //         bairro: "",
-  //         cidade: "",
-  //         estado: "",
-  //       },
-  //     });
-  //     context.commit("UPDATE_LOGIN", false);
-  //   }
-  // }
+
+  actions: {
+    getfuncionario(context, payload) {
+      return api.get(`/funcionario/${payload}`).then(response => {
+        context.commit("UPDATE_FUNCIONARIO", response.data);
+        context.commit("UPDATE_LOGIN", true);
+      });
+    },
+    criarfuncionario(context, payload) {
+      api.get('/funcionario').then(response => {
+        context.commit("UPDATE_FUNCIONARIO", {
+          id: (response.data[response.data.length - 1].id + 1)
+        });
+      });
+      console.log("entrou no criar");
+      return api.post("/funcionario", payload);
+    },
+    deslogarfuncionario(context) {
+      context.commit("UPDATE_FUNCIONARIO", {
+        id: "",
+        nome: "",
+        email: "",
+        senha: "",
+        celular: "",
+        admin: "",
+        cpf: "",
+        rg: "",
+        id_depto: "",
+        data_nascimento: "",
+        salario: "",
+        endereco: {
+          cep: "",
+          rua: "",
+          numero: "",
+          bairro: "",
+          cidade: "",
+          estado: "",
+        },
+      });
+      context.commit("UPDATE_LOGIN", false);
+    }
+  }
 });

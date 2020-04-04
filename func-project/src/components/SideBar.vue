@@ -9,7 +9,7 @@
             </v-list-item-avatar>
           </v-list-item>
         </template>
-        <span>Perfil | {{$store.state.usuario.nome}}</span>
+        <span>Perfil | {{$store.state.funcionario.nome}}</span>
       </v-tooltip>
     </v-list>
 

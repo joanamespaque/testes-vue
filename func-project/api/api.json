@@ -1,55 +1,55 @@
 {
   "departamento": [
     {
-      "id" : 1,
-      "nome" : "Recursos Humanos"
+      "id": 1,
+      "nome": "Recursos Humanos"
     },
     {
-      "id" : 2,
-      "nome" : "Administração"
+      "id": 2,
+      "nome": "Administração"
     },
     {
-      "id" : 3,
-      "nome" : "CSM"
+      "id": 3,
+      "nome": "CSM"
     },
     {
-      "id" : 4,
-      "nome" : "Financeiro"
+      "id": 4,
+      "nome": "Financeiro"
     },
     {
-      "id" : 5,
-      "nome" : "CAM"
+      "id": 5,
+      "nome": "CAM"
     },
     {
-      "id" : 6,
-      "nome" : "CSO"
+      "id": 6,
+      "nome": "CSO"
     },
     {
-      "id" : 7,
-      "nome" : "CNC"
+      "id": 7,
+      "nome": "CNC"
     },
     {
-      "id" : 8,
-      "nome" : "Marketing"
+      "id": 8,
+      "nome": "Marketing"
     },
     {
-      "id" : 9,
-      "nome" : "CVI"
+      "id": 9,
+      "nome": "CVI"
     },
     {
-      "id" : 10,
-      "nome" : "Tecnologia"
+      "id": 10,
+      "nome": "Tecnologia"
     },
     {
-      "id" : 11,
-      "nome" : "Infraestrutura de Redes"
+      "id": 11,
+      "nome": "Infraestrutura de Redes"
     },
     {
-      "id" : 12,
-      "nome" : "Sistemas de Informação"
+      "id": 12,
+      "nome": "Sistemas de Informação"
     }
   ],
-  "funcionario" : [
+  "funcionario": [
     {
       "id": 1,
       "nome": "Cláudio Cobaia Domingues",
@@ -61,20 +61,20 @@
       "cpf": "09092348569",
       "rg": "92837457",
       "id_depto": 1,
-      "data_nascimento" : "01/01/1993",
-      "salario": 1200.40,
-      "endereco": { 
+      "data_nascimento": "01/01/1993",
+      "salario": 1200.4,
+      "endereco": {
         "cep": "96202336",
         "rua": "Avenida Presidente Vargas",
         "numero": "123",
         "bairro": "São Paulo",
         "cidade": "Rio Grande",
-        "complemento":"",
+        "complemento": "",
         "estado": "RS"
       }
     },
     {
-      "id": 3,
+      "id": 2,
       "nome": "Fernanda Teste da Silva",
       "email": "fernanda@vetorial.com",
       "senha": "123",
@@ -84,26 +84,68 @@
       "cpf": "12345678910",
       "rg": "0123456789",
       "id_depto": 2,
-      "data_nascimento" : "02/02/2000",
+      "data_nascimento": "02/02/2000",
       "salario": 1000,
-      "endereco": { 
+      "endereco": {
         "cep": "12345678",
         "rua": "Rua de Teste",
         "numero": "171",
         "bairro": "Bairro Teste",
         "cidade": "Rio Grande",
-        "complemento":"",
+        "complemento": "",
         "estado": "RS"
       }
+    },
+    {
+      "id": 3,
+      "nome": "Joana Mespaque",
+      "email": "joanamespaque@gmail.com",
+      "senha": "JOANAMESPAQUE",
+      "confirmaSenha": "JOANAMESPAQUE",
+      "celular": "(53) 98138-6945",
+      "admin": false,
+      "cpf": "009.909.930-60",
+      "rg": "7109086103",
+      "id_depto": 12,
+      "data_nascimento": "2000-03-22",
+      "salario": "1000",
+      "cep": "96202336",
+      "rua": "Avenida Presidente Vargas",
+      "numero": "442",
+      "bairro": "São Paulo",
+      "cidade": "Rio Grande",
+      "estado": "RS",
+      "sexo": "F"
+    },
+    {
+      "id": 4,
+      "nome": "Carolina Oliveira",
+      "email": "carol.oliveira@email.com",
+      "senha": "carololiveira",
+      "confirmaSenha": "carololiveira",
+      "celular": "(53) 99999-9999",
+      "admin": "",
+      "cpf": "192.192.191-29",
+      "rg": "1999191911",
+      "id_depto": 6,
+      "data_nascimento": "1995-04-18",
+      "salario": "1400",
+      "cep": "96202336",
+      "rua": "Avenida Presidente Vargas",
+      "numero": "442",
+      "bairro": "São Paulo",
+      "cidade": "Rio Grande",
+      "estado": "RS",
+      "sexo": "F"
     }
   ],
-  "tarefa" : [
+  "tarefa": [
     {
       "id": 1,
       "id_funcionario": 1,
-      "titulo" : "Teste Tarefa",
-      "descricao" : "lorem ipsum aqui",
-      "status" : "Em execução"
+      "titulo": "Teste Tarefa",
+      "descricao": "lorem ipsum aqui",
+      "status": "Em execução"
     }
   ]
 }
