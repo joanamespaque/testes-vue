@@ -25,7 +25,7 @@ npm run test
 npm run lint
 ```
 
-### Components used
+### Used components
 ```
 npm install vuetify
 npm install vue-select
