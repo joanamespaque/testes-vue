@@ -1,36 +1,18 @@
-# Projeto de Teste - CRUD Funcionários
+## Projeto de Teste - CRUD Funcionários
 
-## Project setup
+### Project setup
 ```
-npm install
+yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
+yarn serve
 ```
 
 ### Used components
 ```
-npm install vuetify
-npm install vue-select
-npm install vue-the-mask
+yarn add vuetify
+yarn add vue-select
+yarn add vue-the-mask
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
